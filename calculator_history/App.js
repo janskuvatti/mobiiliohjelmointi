@@ -6,32 +6,31 @@ export default function App() {
   const [result, setResult] = useState('');
   const [n1, setN1] = useState('');
   const [n2, setN2] = useState('');
- const [txt, setTxt] = useState('');
  const [list, setList] = useState([]);
 
- const count = operator => {
-const num1 = Number(n1)
-const num2 = Number(n2)
-setTxt(`${num1} ${operator} ${num2}  = ${result}`)
-
-  if(operator === "-"){
-         setResult((num1) - (num2))
-         setList([...list, {key: txt}])
 
 
-  }
-          else{
-            setResult((num1) + (num2))
-  
-            setList([...list, {key: txt}])
+     const plus = () => {
+     
+      const [num1, num2] = [Number(n1), Number(n2) ]
+      const res = num1 + num2 
+      setResult(res)
 
- } 
-setN1('')
-setN2('')
-  
-   }
-  // setTxt(`${n1} - ${n2}  = ${result}`)
-  // 
+      const text = `${num1} + ${num2}  = ${res}`
+
+      setList([...list, {key: String(list.length), text: text}])
+      
+     }
+     const minus = () => {
+      const [num1, num2] = [Number(n1), Number(n2) ]
+      const res = num1 - num2 
+      setResult(res)
+
+      const text = `${num1} - ${num2}  = ${res}`
+
+      setList([...list, {key: String(list.length), text: text}])
+      
+     }
 
   return (
     <View style={styles.container}>
@@ -62,7 +61,7 @@ setN2('')
             <View style={styles.button}>
 
         <Button
-          onPress={() => count("+")}
+          onPress={plus}
 
           title=" + "
           color="#0E9594"
@@ -70,15 +69,15 @@ setN2('')
 />
         <Button
 
-          onPress={() => count("-")}
+          onPress={minus}
 
           title="  -  "
           color="#0E9594"
         />
         </View>
         <Text style={styles.res}>History</Text>
-        <FlatList data = {list}
-        renderItem={({item}) => <Text>{item.key}</Text>}/>
+        <FlatList data = {list} 
+        renderItem={({item}) => <Text>{item.text}</Text>}/>
     </View>
   );
 }
@@ -88,6 +87,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
+    marginTop: 50,
     justifyContent: 'center',
   },
   row: {
