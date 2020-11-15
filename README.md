@@ -11,3 +11,4 @@ Mobiiliohjelmointi (S2020) harjoitustehtävät
 - Tehtävä 5-[Recipe search](/recipes/App.js)
 - Tehtävä 6-[Euro converter](/euro_converter/App.js)
 - Tehtävä 7-[Address finder](/find_address/App.js)
+- Tehtävä 9-[Address finder with location](/address_finder_location/App.js)
