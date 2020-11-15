@@ -6,7 +6,6 @@ import {key} from './key'
 export default function App() {
   const [reg, setReg] = useState({latitude: 60.200692,longitude:24.934302,latitudeDelta: 0.0322, longitudeDelta:0.0221})
   const [address, setAddress] = useState('')
-const [l, setL] = useState(null)
 const locate = async () => {
   let {status} = await Location.requestPermissionsAsync();
   if(status !== "granted"){
