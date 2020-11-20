@@ -12,3 +12,4 @@ Mobiiliohjelmointi (S2020) harjoitustehtävät
 - Tehtävä 6-[Euro converter](/euro_converter/App.js)
 - Tehtävä 7-[Address finder](/find_address/App.js)
 - Tehtävä 9-[Address finder with location](/address_finder_location/App.js)
+- Tehtävä 10-[Shopping list with db](/shopping_db/App.js)
