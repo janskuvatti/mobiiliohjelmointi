@@ -13,3 +13,5 @@ Mobiiliohjelmointi (S2020) harjoitustehtävät
 - Tehtävä 7-[Address finder](/find_address/App.js)
 - Tehtävä 9-[Address finder with location](/address_finder_location/App.js)
 - Tehtävä 10-[Shopping list with db](/shopping_db/App.js)
+- Tehtävä 12-[Text to speech](/text_speech)
+- Tehtävä 13-[Shopping list with UI components](/shopping_ui/App.js)
