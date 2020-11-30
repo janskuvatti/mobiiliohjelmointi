@@ -3,10 +3,8 @@ import { StyleSheet, Text, View, Button, FlatList } from 'react-native';
 import * as Contacts from 'expo-contacts';
 
 export default function App() {
-  const {person, setPerson} = useState({})
-  const [contact, setContact] = useState({id: '', name:'', number:''});
+ 
   const [people, setPeople] = useState([]);
-  const [n, setN] = useState([]);
 
   const search = async() => {
   
